@@ -12,10 +12,14 @@ height: 109vh;
 
 
 body {
-    background-color: rgb(212, 15, 247);
+    background-image: url('back1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: rgb(252, 252, 252);
     font-family: 'Poppins', sans-serif;
 }
+
 
 nav {
     display: flex;
