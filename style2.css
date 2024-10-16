@@ -1,52 +1,58 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    background-image: url('back1.jpg');
-    background-size: cover;
-    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    background-image: url('image/back1.jpg'); /* Use forward slashes */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: for better readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .login-form {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px; /* Limit the width of the form */
+    width: 100%; /* Full width within the max-width */
 }
 
-.login-form h2 {
-    margin: 0 0 15px;
+.logo {
+    display: block; /* Center the logo */
+    margin: 0 auto 20px; /* Space below the logo */
 }
 
-.login-form input {
-    width: 100%;
+h2 {
+    text-align: center; /* Center the heading */
+}
+
+input {
+    width: 100%; /* Full width of the container */
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
 }
 
-.login-form button {
-    width: 100%;
+button {
+    width: 100%; /* Full width of the container */
     padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
 }
 
-.login-form button:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+
+.forgot-password {
+    text-align: center; /* Center the link */
 }
