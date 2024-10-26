@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telgrid</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<!-- Added Poppins Text Style In Portfolio-->
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-
 <body>
     <div class="main">
-    <!--Header and  Navbar added -->
-    <header>
-        <nav>
-            <div class="left">
-                TELGRID 
-            </div>
-            <div class="right">
-                <ul>
-                    <div>
-                    <li> <a href="#">Home</a></li>
-                    </div>
-                    <li> <a href="#">About</a></li>
-                    <li> <a href="#">Contact Me</a></li>
+        <!-- Header and Navbar -->
+        <header>
+            <nav>
+                <div class="nav-left">TELGRID</div>
+                <ul class="nav-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Me</a></li>
                 </ul>
-                </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <!-- About, Download Resume,Visit Github And Image are Ade don Website -->
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi, Welcome to site <span class="red"> Telgrid</span>
-                <div>This will help you to</div>
-                <span id="element"></span>
-                <div class="rightSection">
-                    <img src="image/sitetitlelogo.png" alt="">    
+        <!-- Hero Section -->
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Hi, Welcome to <span class="highlight">Telgrid</span></h1>
+                    <p>This will help you to</p>
+                    <span id="element"></span>
+                    <div class="buttons">
+                        <a href="clintlogin.html" target="_blank" class="btn">I'm a Client</a>
+                        <a href="logincmpny.html" target="_blank" class="btn">I'm a Company</a>
+                    </div>
                 </div>
-                <div class="button">
-                    <a href="clintlogin.html" target="_blank">
-                    <button class="btn">I'm a Client</button></a>
-                    <a href="logincmpny.html" target="_blank">
-                        <button class="btn">I'm a Compny</button>
-                    </a>
+                <div class="hero-image">
+                    <img src="image/sitetitlelogo.png" alt="Telgrid Logo">
                 </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>Telgrid Connecting the World</p>
+                <p>&copy; 2023 Telgrid.world | All Rights Reserved</p>
             </div>
-        </section>
-             <!-- Footer Created and Added on Portfolio  -->
-    <footer>
-        <div class="footer">
-            <div class="footer-first">
-                Telgrid Connecting world
-            </div>
-        </div>
-        <div class="footer-right">
-            Copyright &#169; Telgrid.world | All Right Reserved
-        </div>
-    </footer>
-</div>
-    <!-- Added a CDN for Animated Tpying Animation -->
+        </footer>
+    </div>
+
+    <!-- Typed.js animation script -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
