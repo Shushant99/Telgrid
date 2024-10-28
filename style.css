@@ -8,7 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     color: #fcfcfc;
-    background: url('back1.jpg') center center / cover no-repeat;
+    background-color: #00215f; /* Body background color as fallback */
 }
 
 /* Navbar */
@@ -47,13 +47,15 @@ header nav {
     font-size: 1.2rem;
 }
 
-/* Hero Section */
+/* Hero Section with Background Image */
 .hero {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 80px 5%;
     text-align: center;
+    background: url('back1.jpg') center center / cover no-repeat; /* Middle section background */
+    color: #fcfcfc;
 }
 
 .hero-content {
