@@ -31,6 +31,7 @@ header nav {
     color: #fff;
     font-weight: 600;
     margin-right: 30px;
+    text-decoration-line: none;
 }
 
 .nav-links {
