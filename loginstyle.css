@@ -170,3 +170,21 @@ header nav {
 .forgot-password:hover {
     color: #03f803;
 }
+footer {
+    background-color: #16163d;
+    color: #bdbdbd;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content p {
+    margin: 5px;
+}
