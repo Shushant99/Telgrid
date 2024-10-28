@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Telgrid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <div class="logo">TELGRID</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="logout.html" class="btn-nav">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="settings-section">
+            <h1>Account Settings</h1>
+
+            <!-- Profile Settings -->
+            <div class="profile-settings">
+                <h2>Profile Settings</h2>
+                <form>
+                    <label for="profile-pic">Profile Picture:</label>
+                    <input type="file" id="profile-pic">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" value="[Current Username]">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="[Current Email]">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" value="[Current Phone Number]">
+                    <button type="submit" class="btn-action">Save Changes</button>
+                </form>
+            </div>
+
+            <!-- Account Security -->
+            <div class="account-security">
+                <h2>Account Security</h2>
+                <form>
+                    <label for="current-password">Current Password:</label>
+                    <input type="password" id="current-password">
+                    <label for="new-password">New Password:</label>
+                    <input type="password" id="new-password">
+                    <label for="confirm-password">Confirm New Password:</label>
+                    <input type="password" id="confirm-password">
+                    <button type="submit" class="btn-action">Change Password</button>
+                </form>
+                <button class="btn-action">Enable Two-Factor Authentication</button>
+                <button class="btn-action">Logout from All Devices</button>
+            </div>
+
+            <!-- Notification Preferences -->
+            <div class="notification-preferences">
+                <h2>Notification Preferences</h2>
+                <form>
+                    <label><input type="checkbox" checked> Receive Email Notifications</label><br>
+                    <label><input type="checkbox"> Receive SMS Notifications</label>
+                    <button type="submit" class="btn-action">Save Preferences</button>
+                </form>
+            </div>
+
+            <!-- Billing Information -->
+            <div class="billing-info">
+                <h2>Billing Information</h2>
+                <form>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number">
+                    <label for="expiration-date">Expiration Date:</label>
+                    <input type="text" id="expiration-date" placeholder="MM/YY">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv">
+                    <button type="submit" class="btn-action">Update Billing Info</button>
+                </form>
+                <button class="btn-action">View Billing History</button>
+            </div>
+
+            <!-- Support Section -->
+            <div class="support-section">
+                <h2>Need Help?</h2>
+                <p>If you have any questions, feel free to <a href="#">Contact Support</a> or visit our <a href="#">FAQ</a> page.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
