@@ -3,53 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telgrid</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Telgrid - Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
-        <!-- Header and Navbar -->
+        <!-- Navbar -->
         <header>
             <nav>
-                <div class="nav-left">TELGRID</div>
-                <ul class="nav-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Me</a></li>
-                </ul>
+                <div class="nav-left">
+                    <div class="logo">TELGRID</div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a href="login.html" class="btn-nav">Login</a>
+                    <a href="signup.html" class="btn-nav signup">Signup</a>
+                </div>
             </nav>
         </header>
 
-        <!-- Hero Section -->
+        <!-- Login Section -->
         <main>
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Hi, Welcome to <span class="highlight">Telgrid</span></h1>
-                    <p>This will help you to</p>
-                    <span id="element"></span>
-                    <div class="buttons">
-                        <a href="clintlogin.html" target="_blank" class="btn">I'm a Client</a>
-                        <a href="logincmpny.html" target="_blank" class="btn">I'm a Company</a>
-                    </div>
+            <section class="login-hero">
+                <div class="login-options">
+                    <button class="btn" id="clientBtn">Client</button>
+                    <button class="btn" id="companyBtn">Company</button>
                 </div>
-                <div class="hero-image">
-                    <img src="image/sitetitlelogo.png" alt="Telgrid Logo">
+                <div class="login-form" id="loginForm">
+                    <h2 id="loginTitle">Login as Client</h2>
+                    <form>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        
+                        <button type="submit" class="btn-submit">Login</button>
+                    </form>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
                 </div>
             </section>
         </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <p>Telgrid Connecting the World</p>
-                <p>&copy; 2023 Telgrid.world | All Rights Reserved</p>
-            </div>
-        </footer>
     </div>
 
-    <!-- Typed.js animation script -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <!-- JavaScript for Dynamic Form -->
+    <script>
+        const clientBtn = document.getElementById('clientBtn');
+        const companyBtn = document.getElementById('companyBtn');
+        const loginTitle = document.getElementById('loginTitle');
+
+        clientBtn.addEventListener('click', () => {
+            loginTitle.textContent = "Login as Client";
+        });
+
+        companyBtn.addEventListener('click', () => {
+            loginTitle.textContent = "Login as Company";
+        });
+    </script>
 </body>
 </html>
