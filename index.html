@@ -40,6 +40,26 @@
                     <span id="element"></span>
                     
                 </div>
+               
+<div class="massage">
+  <h2>Send us a message on WhatsApp</h2>
+  <form id="whatsappForm">
+    <label for="message">Your Message:</label>
+    <textarea id="message" rows="4" placeholder="Type your message here..."></textarea><br><br>
+    <button type="button" onclick="sendMessage()">Send on WhatsApp</button>
+  </form>
+
+  <script>
+    function sendMessage() {
+      const phoneNumber = '7470806683'; // Replace with your WhatsApp number
+      const message = document.getElementById('message').value;
+      const url = `https://wa.me/${7470806683}?text=${encodeURIComponent(message)}`;
+      window.open(https://wa.me/7470806683?text=<Message> , '_blank');
+    }
+  </script>
+</div>
+
+
                 <div class="hero-image">
                     <img src="image/sitetitlelogo.png" alt="Telgrid Logo">
                 </div>
