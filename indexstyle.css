@@ -5,10 +5,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Ensure body takes the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: #fcfcfc;
     background-color: #00215f;
+    flex: 1; /* Allow the body to expand and fill available space */
 }
 
 /* Navbar */
@@ -153,6 +160,7 @@ header nav {
 /* Blog Post Section */
 main {
     padding: 30px 10%;
+    flex: 1; /* Allow main content to take up available space */
 }
 
 .blog-posts {
@@ -219,6 +227,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 .footer-content {
