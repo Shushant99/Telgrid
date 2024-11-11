@@ -15,6 +15,8 @@ body {
 header {
     position: relative;
     z-index: 1;
+    background-color: #003080; /* Dark blue for navbar background */
+    color: #fff;
 }
 
 header nav {
@@ -22,7 +24,6 @@ header nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: #003080; /* Dark blue for navbar background */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow to separate from hero */
 }
 
@@ -55,7 +56,7 @@ header nav {
 }
 
 .nav-links li a:hover {
-    color: #6767e4;
+    color: #ff5733; /* Orange on hover */
     font-size: 1.2rem;
 }
 
@@ -76,12 +77,12 @@ header nav {
 }
 
 .btn-nav.signup {
-    background-color: #03a9f4;
+    background-color: #03a9f4; /* Light blue for sign-up */
 }
 
 .btn-nav:hover {
-    background-color: #03f803;
-    color: #000;
+    background-color: #ff5733; /* Orange for hover */
+    color: #fff;
 }
 
 /* Hero Section with Background Image */
@@ -105,6 +106,7 @@ header nav {
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .hero-content p {
@@ -148,6 +150,68 @@ header nav {
     height: auto;
 }
 
+/* Blog Post Section */
+main {
+    padding: 30px 10%;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.post {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    position: relative;
+}
+
+.post:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Soft black overlay */
+    z-index: -1; /* Ensure overlay is behind the content */
+    border-radius: 12px;
+}
+
+.post h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.post h2 a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.post h2 a:hover {
+    color: #f5a623; /* Bright orange-yellow on hover */
+}
+
+.post .excerpt {
+    font-size: 16px;
+    color: #f8f8f8;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
 /* Footer */
 footer {
     background-color: #16163d;
@@ -182,5 +246,19 @@ footer {
     .hero-content {
         text-align: center;
         margin: 0 auto;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 30px 5%;
     }
 }
