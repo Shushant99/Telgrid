@@ -5,10 +5,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Ensure body takes the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: #fcfcfc;
     background-color: #00215f;
+    flex: 1; /* Allow the body to expand and fill available space */
 }
 
 /* Navbar */
@@ -111,6 +118,43 @@ header nav {
     color: #000;
 }
 
+/* New Style for the "Client" and "Company" buttons */
+.client-company-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 5%;
+    background-color: #003080; /* Background color of the button section */
+}
+
+.client-company-buttons .btn-client,
+.client-company-buttons .btn-company {
+    padding: 12px 24px;
+    background-color: #1e2168;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 45%; /* Buttons take up 45% of the space */
+}
+
+.client-company-buttons .btn-client:hover,
+.client-company-buttons .btn-company:hover {
+    background-color: #03f803;
+    color: #000;
+}
+
+.client-company-buttons .btn-client {
+    background-color: #ff5733; /* Red-orange for "Client" button */
+}
+
+.client-company-buttons .btn-company {
+    background-color: #03a9f4; /* Light blue for "Company" button */
+}
+
+/* Login Form */
 .login-form {
     background-color: #003080;
     padding: 40px;
@@ -170,12 +214,15 @@ header nav {
 .forgot-password:hover {
     color: #03f803;
 }
+
+/* Footer */
 footer {
     background-color: #16163d;
     color: #bdbdbd;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;
+    margin-top: auto; /* Ensure footer stays at the bottom */
 }
 
 .footer-content {
@@ -187,4 +234,43 @@ footer {
 
 .footer-content p {
     margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .client-company-buttons {
+        flex-direction: column;
+    }
+
+    .client-company-buttons .btn-client,
+    .client-company-buttons .btn-company {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .login-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .client-company-buttons {
+        flex-direction: column;
+    }
+
+    .client-company-buttons .btn-client,
+    .client-company-buttons .btn-company {
+        width: 100%;
+        margin-bottom: 15px;
+    }
 }
