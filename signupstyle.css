@@ -6,7 +6,7 @@
 }
 
 html, body {
-    height: 100%; /* Ensure body takes the full height of the viewport */
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -14,8 +14,8 @@ html, body {
 body {
     font-family: 'Poppins', sans-serif;
     color: #fcfcfc;
-    background-color: #00215f;
-    flex: 1; /* Allow the body to expand and fill available space */
+    background-color: #00215f; /* Dark background */
+    flex: 1;
 }
 
 /* Navbar */
@@ -96,45 +96,30 @@ header nav {
     color: #fcfcfc;
 }
 
-/* Signup Buttons: Client and Company */
-.signup-buttons {
+.signup-options {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 30px 5%;
-    background-color: #003080; /* Background color of the button section */
+    flex-direction: column;
+    gap: 20px;
 }
 
-.signup-buttons .btn-client,
-.signup-buttons .btn-company {
-    padding: 12px 24px;
-    background-color: #1e2168;
+.signup-options .btn {
+    padding: 12px 20px;
+    background-color: #1e2168; /* Dark Blue */
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 5px;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    width: 45%; /* Buttons take up 45% of the space */
+    transition: background-color 0.3s;
 }
 
-.signup-buttons .btn-client:hover,
-.signup-buttons .btn-company:hover {
+.signup-options .btn:hover {
     background-color: #03f803;
     color: #000;
 }
 
-.signup-buttons .btn-client {
-    background-color: #ff5733; /* Red-orange for "Client" button */
-}
-
-.signup-buttons .btn-company {
-    background-color: #03a9f4; /* Light blue for "Company" button */
-}
-
-/* Signup Form */
+/* Updated Signup Form Colors */
 .signup-form {
-    background-color: #003080;
+    background-color: #003080; /* Dark Blue Background */
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
@@ -157,7 +142,7 @@ header nav {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #1e2168;
+    border: 1px solid #1e2168; /* Dark Blue Border */
     background-color: #fcfcfc;
     font-size: 1rem;
 }
@@ -166,7 +151,7 @@ header nav {
     width: 100%;
     padding: 12px;
     margin-top: 20px;
-    background-color: #1e2168;
+    background-color: #03a9f4; /* Light Blue for Submit Button */
     color: #fff;
     border-radius: 5px;
     border: none;
@@ -180,13 +165,105 @@ header nav {
     color: #000;
 }
 
+/* Login Section */
+.login-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 5%;
+    color: #fcfcfc;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-options .btn {
+    padding: 12px 20px;
+    background-color: #1e2168; /* Dark Blue */
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-options .btn:hover {
+    background-color: #03f803;
+    color: #000;
+}
+
+/* Updated Login Form Colors */
+.login-form {
+    background-color: #003080; /* Dark Blue Form Background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    font-size: 1rem;
+    color: #f5f5f5;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #1e2168; /* Dark Blue Border */
+    background-color: #fcfcfc;
+    font-size: 1rem;
+}
+
+.login-form .btn-submit {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #03a9f4; /* Light Blue Submit Button */
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.login-form .btn-submit:hover {
+    background-color: #03f803;
+    color: #000;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #03a9f4;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    color: #03f803;
+}
+
+/* Footer */
 footer {
     background-color: #16163d;
     color: #bdbdbd;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;
-    margin-top: auto; /* Ensure footer stays at the bottom */
+    margin-top: auto;
 }
 
 .footer-content {
@@ -198,43 +275,4 @@ footer {
 
 .footer-content p {
     margin: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .signup-hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .signup-buttons {
-        flex-direction: column;
-    }
-
-    .signup-buttons .btn-client,
-    .signup-buttons .btn-company {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .signup-form {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .signup-hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .signup-buttons {
-        flex-direction: column;
-    }
-
-    .signup-buttons .btn-client,
-    .signup-buttons .btn-company {
-        width: 100%;
-        margin-bottom: 15px;
-    }
 }
