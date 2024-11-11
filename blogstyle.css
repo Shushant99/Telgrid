@@ -155,33 +155,22 @@ main {
 
 /* Footer Styling */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #16163d;
+    color: #bdbdbd;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-/* Button Hover Effect */
-.btn-nav {
-    margin-left: 20px;
-    padding: 8px 16px;
-    background-color: #1e2168;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+    padding: 20px 0;
     font-size: 0.9rem;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
-.btn-nav:hover {
-    background-color: #ff5733; /* Red-orange on hover */
-    color: white;
-    transform: translateY(-3px); /* Slightly lift the button */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content p {
+    margin: 5px;
 }
 
 /* Responsive Design */
