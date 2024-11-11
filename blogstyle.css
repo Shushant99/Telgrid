@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    background-color: #003080; /* Dark blue for header background */
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow to make header pop */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #003080; /* Dark blue */
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .logo {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff5733; /* Light orange for hover effect */
+    font-size: 1.2rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.btn-nav {
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: #1e2168;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-nav.signup {
+    background-color: #03a9f4; /* Light blue */
+}
+
+.btn-nav:hover {
+    background-color: #ff5733; /* Red-orange for hover */
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    padding: 30px 10%;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.post {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+    padding: 20px;
+    transition: all 0.3s ease-in-out; /* Smooth hover transition */
+    color: white; /* White text for contrast */
+    position: relative;
+    background-color: #fff; /* Default background color for content block */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.post:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Soft black overlay to match header */
+    z-index: -1; /* Ensures overlay is behind the content */
+    border-radius: 12px;
+}
+
+.post h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700; /* Bold title */
+    transition: color 0.3s ease;
+}
+
+.post h2 a {
+    text-decoration: none;
+    color: #fff; /* Default color for titles */
+    transition: color 0.3s ease;
+}
+
+.post h2 a:hover {
+    color: #f5a623; /* Bright yellow-orange for hover */
+}
+
+.post .excerpt {
+    font-size: 16px;
+    color: #f8f8f8; /* Lighter white for the excerpt */
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Hover Effect on Post Cards */
+.post:hover {
+    transform: translateY(-10px); /* Slightly raise the card */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Increase shadow depth */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Button Hover Effect */
+.btn-nav {
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: #1e2168;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #ff5733; /* Red-orange on hover */
+    color: white;
+    transform: translateY(-3px); /* Slightly lift the button */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-posts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 30px 5%;
+    }
+}
