@@ -5,7 +5,7 @@
 }
 
 html, body {
-    height: 100%; /* Ensure body takes the full height of the viewport */
+    /* height: 100%; Ensure body takes the full height of the viewport */
     display:flex;
     flex-direction: column;
 }
