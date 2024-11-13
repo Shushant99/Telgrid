@@ -241,7 +241,7 @@ footer {
     margin: 5px;
 }
 
-/* Responsive Design */
+/* Responsive Design
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -270,4 +270,49 @@ footer {
     main {
         padding: 30px 5%;
     }
-}
+} */
+/* CSS For Small Screens */
+@media only screen and (max-width: 600px) {
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 70px;
+      background-color: rgb(9, 9, 49);
+    }
+  
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+  
+    nav ul li {
+      list-style: none;
+      margin: 0 10px;
+      text-align: center;
+    }
+  
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+  
+    .left {
+      position: relative;
+      font-size: 1.1rem;
+      left: 10px;
+    }
+  
+    .right {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  
+    .page-content {
+      font-size: larger;
+      position: relative;
+      text-align: center;
+      margin: 10px;
+    }
+  
+  }

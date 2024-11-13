@@ -385,6 +385,25 @@ header nav {
   .btn-3:hover:before {
     --progress: 0;
   }
+  footer {
+    background-color: #16163d;
+    color: #bdbdbd;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content p {
+    margin: 5px;
+}
   
   /* CSS For Small Screens */
   @media only screen and (max-width: 600px) {
