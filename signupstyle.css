@@ -83,7 +83,7 @@ header nav {
 }
 
 .btn-nav:hover {
-    background-color: #03f803;
+    background-color: #ff5733;
     color: #000;
 }
 
@@ -113,7 +113,7 @@ header nav {
 }
 
 .signup-options .btn:hover {
-    background-color: #03f803;
+    background-color: #ff5733;
     color: #000;
 }
 
@@ -161,7 +161,7 @@ header nav {
 }
 
 .signup-form .btn-submit:hover {
-    background-color: #03f803;
+    background-color: #ff5733;
     color: #000;
 }
 
@@ -191,7 +191,7 @@ header nav {
 }
 
 .login-options .btn:hover {
-    background-color: #03f803;
+    background-color: #ff5733;
     color: #000;
 }
 
@@ -239,7 +239,7 @@ header nav {
 }
 
 .login-form .btn-submit:hover {
-    background-color: #03f803;
+    background-color: #ff5733;
     color: #000;
 }
 
@@ -253,7 +253,7 @@ header nav {
 }
 
 .forgot-password:hover {
-    color: #03f803;
+    color: #ff5733;
 }
 
 /* Footer */
