@@ -8,7 +8,6 @@
 html,
 body {
     height: 100%;
-    /* Ensure body takes the full height of the viewport */
     display: flex;
     flex-direction: column;
 }
@@ -18,7 +17,6 @@ body {
     color: #fcfcfc;
     background-color: #00215f;
     flex: 1;
-    /* Allow the body to expand and fill available space */
 }
 
 /* Navbar */
@@ -26,10 +24,7 @@ header {
     position: relative;
     z-index: 1;
     background-color: #003080;
-    /* Dark blue for navbar background */
     color: #fff;
-    
-    
 }
 
 header nav {
@@ -39,12 +34,10 @@ header nav {
     align-items: center;
     padding: 20px 5%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    /* Shadow to separate from hero */
 }
 
 .nav-left {
     display: flex;
-    
     align-items: center;
 }
 
@@ -58,7 +51,6 @@ header nav {
 .nav-links {
     list-style: none;
     display: flex;
-  
 }
 
 .nav-links li {
@@ -74,13 +66,11 @@ header nav {
 
 .nav-links li a:hover {
     color: #ff5733;
-    /* Orange on hover */
     font-size: 1.2rem;
 }
 
 .nav-right {
     display: flex;
-    
     align-items: center;
 }
 
@@ -97,19 +87,16 @@ header nav {
 
 .btn-nav.signup {
     background-color: #03a9f4;
-    /* Light blue for sign-up */
 }
 
 .btn-nav:hover {
     background-color: #ff5733;
-    /* Orange for hover */
     color: #fff;
 }
 
-/* Hero Section with Background Image */
+/* Hero Section */
 .hero {
     display: flex;
-
     justify-content: space-around;
     align-items: center;
     padding: 80px 5%;
@@ -117,8 +104,6 @@ header nav {
     background: url('back1.jpg') center center / cover no-repeat;
     color: #fcfcfc;
     position: relative;
-    z-index: 0;
-    /* Ensure navbar appears above */
 }
 
 .hero-content {
@@ -127,23 +112,19 @@ header nav {
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: #bdbdbd;
 }
 
 .highlight {
     color: #b582e6;
     font-weight: 600;
-}
-
-#element {
-    color: #b582e6;
 }
 
 .buttons {
@@ -171,77 +152,10 @@ header nav {
 .hero-image img {
     max-width: 500px;
     height: auto;
+    max-width: 100%;
 }
 
-/* Blog Post Section */
-main {
-    padding: 30px 10%;
-    flex: 1;
-    /* Allow main content to take up available space */
-}
 
-.blog-posts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-}
-
-.post {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    /* Gradient background */
-    border-radius: 12px;
-    /* Rounded corners */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    /* Soft shadow */
-    padding: 20px;
-    transition: all 0.3s ease-in-out;
-    color: white;
-    position: relative;
-}
-
-.post:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    /* Soft black overlay */
-    z-index: -1;
-    /* Ensure overlay is behind the content */
-    border-radius: 12px;
-}
-
-.post h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.post h2 a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.post h2 a:hover {
-    color: #f5a623;
-    /* Bright orange-yellow on hover */
-}
-
-.post .excerpt {
-    font-size: 16px;
-    color: #f8f8f8;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.post:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
 
 /* Footer */
 footer {
@@ -251,7 +165,6 @@ footer {
     padding: 20px 0;
     font-size: 0.9rem;
     margin-top: auto;
-    /* Push footer to the bottom */
 }
 
 .footer-content {
@@ -266,19 +179,15 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .hero {
         flex-direction: column;
+        text-align: center;
+        padding: 60px 10%;
     }
 
     .hero-image img {
-        max-width: 300px;
-        margin-top: 20px;
-    }
-
-    .hero-content {
-        text-align: center;
-        margin: 0 auto;
+        max-width: 80%;
     }
 
     .blog-posts {
@@ -286,12 +195,35 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 40px 5%;
+    }
+
     .blog-posts {
         grid-template-columns: 1fr;
     }
+}
 
-    main {
-        padding: 30px 5%;
+@media (max-width: 480px) {
+    header nav {
+        padding: 15px 5%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
     }
 }
