@@ -30,6 +30,7 @@ header {
 
 header nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
@@ -38,6 +39,7 @@ header nav {
 
 .nav-left {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -51,6 +53,7 @@ header nav {
 .nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -71,6 +74,7 @@ header nav {
 
 .nav-right {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -97,6 +101,7 @@ header nav {
 /* Hero Section with Background Image */
 .hero {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 80px 5%;
