@@ -1,68 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telgrid</title>
-    <link rel="stylesheet" href="indexstyle.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7290127773146699"
-        crossorigin="anonymous"></script>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #ffa17f, #00223e);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(to right, #ffa17f, #00223e);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .cta-buttons button {
+            margin-left: 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .login {
+            background-color: #ff8142;
+            color: #fff;
+        }
+
+        .get-started {
+            background-color: #ffa17f;
+            color: #00223e;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            overflow: hidden;
+            display: inline-block;
+            border-right: 2px solid #fff; /* Typing cursor effect */
+            width: 100%; /* Allow text to wrap */
+        }
+
+        .hero-image {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: linear-gradient(to right, #ffa17f, #00223e);
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="main">
-        <!-- Header and Navbar -->
-        <header>
-            <nav>
-                <div class="nav-left">
-                    <div class="logo">TELGRID</div>
-                    <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="nav-right">
-                    <a href="login.html" class="btn-nav">Login</a>
-                    <a href="signup.html" class="btn-nav signup">Signup</a>
-                </div>
-            </nav>
-        </header>
+    <!-- Header -->
+    <header>
+        <div class="logo">Telgrid.world</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cta-buttons">
+            <button class="login.html">Log in</button>
+            <button class="signup.html">Get Started</button>
+        </div>
+    </header>
 
-        <!-- Hero Section -->
-        <main>
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Hi, Welcome to <span class="highlight">Telgrid</span></h1>
-                    <p>This will help you to</p>
-                    <span id="element"></span>
-
-                </div>
-    </div>
-
-
-    <!-- <div class="hero-image">
-        <img src="image/sitetitlelogo.png" alt="Telgrid Logo">
-    </div> -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Hi, welcome to Telgrid</h1>
+            <p id="typing-text"></p>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x400" alt="Crowd Illustration">
+        </div>
     </section>
-    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <p>Telgrid Connecting the World</p>
-            <p>&copy; 2023 Telgrid.world | All Rights Reserved</p>
-        </div>
+        &copy; 2023 Telgrid.world | All Rights Reserved
     </footer>
-    </div>
 
-    <!-- Typed.js animation script -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <script>
+        // JavaScript for typing animation
+        const textElement = document.getElementById("typing-text");
+        const textContent = "At Telgrid, we specialize in connecting skilled professionals with companies seeking talent for their projects. By leveraging our extensive network and deep industry knowledge, we ensure that you find the right match for your needs. Let Telgrid help you streamline your hiring process and enhance your team's capabilities today.";
+        let index = 0;
+
+        function typeText() {
+            if (index < textContent.length) {
+                textElement.textContent += textContent.charAt(index);
+                index++;
+                setTimeout(typeText, 50); // Adjust speed of typing here
+            }
+        }
+
+        // Start typing animation when the page loads
+        window.onload = typeText;
+    </script>
 </body>
-
 </html>
