@@ -15,7 +15,8 @@
         }
 
         body {
-            background: linear-gradient(to right, #FF7E5F, #FED47B);
+            /* background: linear-gradient(to right, #FF7E5F, #FED47B); */
+            background: linear-gradient(135deg, #61f7d9, #009e9c);
             color: white;
             overflow-x: hidden;
         }
@@ -26,7 +27,13 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
-            background: linear-gradient(to right, #FF7E5F, #FED47B);
+            /* background: linear-gradient(to right, #FF7E5F, #FED47B); */
+            /* background: linear-gradient(135deg, #006c6b, #333333); */
+            background-color: #333333;
+            /* Dark gray */
+
+
+
         }
 
         .logo {
@@ -48,39 +55,59 @@
             color: #fff;
             font-size: 1rem;
         }
+        nav ul li a:hover {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+        }
 
 
 
-        .login {
+        .button-login {
             margin-left: 10px;
             padding: 8px 15px;
             border-radius: 10px;
             cursor: pointer;
             font-size: 1rem;
-            background-color: #ffb163;
+            /* background-color: #ffb163; */
             border: solid black 2px;
             color: #fffbfb;
             text-decoration: none;
+            background: linear-gradient(135deg, #61f7d9, #009e9c);
         }
 
-        .signup {
+        .button-login:hover {
+            background: linear-gradient(135deg, #009e9c, #61f7d9);
+            /* Inverted gradient on hover */
+        }
+
+        .button-signup {
             margin-left: 10px;
             padding: 8px 15px;
             border: solid black 2px;
             border-radius: 10px;
             cursor: pointer;
             font-size: 1rem;
-            background-color: #ffad5b;
+            /* background-color: #ffad5b; */
             color: #fbfeff;
             text-decoration: none;
+            background: linear-gradient(135deg, #74b9ff, #00cec9);
+        }
+
+        .button-signup:hover {
+            background: linear-gradient(135deg, #00cec9, #74b9ff);
+            /* Inverted gradient on hover */
         }
 
         /* Hero Section */
         .hero {
+            border-top: #fbfeff 2px solid;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 50px 20px;
+            /* background: linear-gradient(135deg, #61f7d9, #009e9c); */
+
         }
 
         .hero-text {
@@ -113,8 +140,58 @@
         .hero-image img {
             width: 100%;
             border-radius: 10px;
+
         }
 
+
+        /* Hero Section2 */
+        .hero2 {
+            border-top: #f7f7f7 1px solid;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            /* background: linear-gradient(135deg, #61f7d9, #009e9c); */
+        }
+
+        .hero-text2 {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .hero-text2 h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
+
+        /* Hero Section3 */
+        .hero3 {
+            border-top: #f7f7f7 1px solid;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            /* background: linear-gradient(135deg, #61f7d9, #009e9c); */
+
+        }
+
+        .hero-text3 {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .hero-text3 h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        
         /* Footer */
         footer {
             text-align: center;
@@ -139,8 +216,8 @@
             </ul>
         </nav>
         <div class="cta-buttons">
-            <a href="login.html" class="login">Log in</a>
-            <a href="signup.html" class="signup">Get Started</a>
+            <a href="login.html" class="button-login">Log in</a>
+            <a href="signup.html" class="button-signup">Get Started</a>
         </div>
     </header>
 
@@ -151,15 +228,33 @@
             <p id="typing-text"></p>
         </div>
         <div class="hero-image">
-            <img src="image/WhatsApp_Image_2024-11-21_at_21.37.30_cc6409af-removebg-preview.png" alt="Crowd Illustration">
+            <img src="image/imagetelgrid.png" alt="Crowd Illustration">
         </div>
     </section>
-
-    <!-- Footer -->
+    <!-- Hero Section 2-->
+    <section class="hero2">
+        <div class="hero-image">
+            <img src="image/s1.png" alt="Crowd Illustration">
+        </div>
+        <div class="hero-text2">
+            <h1>Find the Perfect Candidate</h1>
+            <p></p>
+        </div>
+    </section>
+    <!-- Hero Section 3-->
+    <section class="hero3">
+        <div class="hero-text3">
+            <h1>Showcase Your Skills and Experience</h1>
+            <p></p>
+        </div>
+        <div class="hero-image">
+            <img src="image/s2.png" alt="Crowd Illustration">
+        </div>
+    </section>
+    <!-- footer -->
     <footer>
         &copy; 2023 Telgrid.world | All Rights Reserved
     </footer>
-
     <script>
         // JavaScript for typing animation
         const textElement = document.getElementById("typing-text");
@@ -176,6 +271,26 @@
 
         // Start typing animation when the page loads
         window.onload = typeText;
+
+
+        // Function to observe when the image enters the viewport
+        const image = document.querySelector('.hero-image2 img');
+
+        // Create an intersection observer to track when the image enters the screen
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add the 'zoomed' class when the image enters the viewport
+                    entry.target.classList.add('zoomed');
+                } else {
+                    // Remove the 'zoomed' class when the image exits the viewport
+                    entry.target.classList.remove('zoomed');
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the image is visible
+
+        // Start observing the image
+        observer.observe(image);
     </script>
 </body>
 
