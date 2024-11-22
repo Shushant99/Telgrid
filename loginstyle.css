@@ -87,7 +87,7 @@ body {
 .signup-buttons {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    max-width: 50%;
     padding: 30px 5%;
     background-color: #003080; /* Background color of the button section */
 }
@@ -125,7 +125,7 @@ body {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
+    max-width: 50%;
     width: 100%;
 }
 
