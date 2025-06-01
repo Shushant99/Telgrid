@@ -386,12 +386,13 @@ header nav {
     --progress: 0;
   }
   footer {
-    background-color: #16163d;
+            background: linear-gradient(to bottom, #2D2D2D, #121212);
+   
     color: #bdbdbd;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto;
 }
 
 .footer-content {
