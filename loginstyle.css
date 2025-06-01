@@ -113,8 +113,7 @@ nav ul li a:hover {
 
 .signup-buttons .btn-client:hover,
 .signup-buttons .btn-company:hover {
-    background-color: #ff5733;
-    color: #000;
+    background: linear-gradient(135deg, #009e9c, #61f7d9);
 }
 
 .signup-buttons .btn-client {
