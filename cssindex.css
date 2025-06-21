@@ -21,16 +21,15 @@ html, body {
         <source src="matrix‑green.mp4" type="video/mp4">
       </video>
 */
-.bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1; /* push behind everything */
- 
-}
+.video-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
 
 
 /*  ───────────────────────────────
