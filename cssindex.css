@@ -67,7 +67,7 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #00ff6a;
+  color: #bee60dc9;
 }
 
 /* Navigation */
@@ -85,7 +85,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #00ff6a;
+  color: #d5fe06;
 }
 
 /* CTA buttons aligned right */
@@ -97,7 +97,7 @@ nav a:hover {
 .button-login,
 .button-signup {
   padding: 0.5rem 1rem;
-  border: 2px solid #00ff6a;
+  border: 2px solid #ecff18;
   color: white;
   background: transparent;
   border-radius: 6px;
@@ -108,7 +108,7 @@ nav a:hover {
 
 .button-login:hover,
 .button-signup:hover {
-  background: #00ff6a;
+  background: #f6f223;
   color: black;
   box-shadow: 0 0 12px #00ff6a;
 }
@@ -134,7 +134,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #00ff6a;
+  color: #bdfd1a;
 }
 
 .cta-buttons {
@@ -155,7 +155,7 @@ nav a:hover {
   letter-spacing: 0.4px;
   text-decoration: none;
   color: #ffffff;
-  border: 2px solid #00ff6a;
+  border: 2px solid #0263e1;
   border-radius: 8px;
   background: transparent;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -165,9 +165,9 @@ nav a:hover {
 .button-signup:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow:
-    0 0 8px 2px #00ff6a,
-    0 0 18px 6px rgba(0, 255, 106, 0.6),
-    inset 0 0 4px 1px #00ff6a;
+    0 0 8px 2px #0a02ee,
+    0 0 18px 6px rgba(3, 104, 199, 0.6),
+    inset 0 0 4px 1px #0264ce;
 }
 
 /*  ───────────────────────────────
