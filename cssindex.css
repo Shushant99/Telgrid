@@ -9,8 +9,9 @@
 
 html, body {
   height: 100%;
-  font-family: "Segoe UI", Arial, sans-serif;
-  color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: transparent;
   overflow-x: hidden;
 }
 
