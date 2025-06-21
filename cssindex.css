@@ -37,7 +37,7 @@ html, body {
     ─────────────────────────────── */
 header, footer {
   width: 100%;
-  background: rgba(0, 0, 0, 0.35);   /* Slightly dark overlay */
+  background-color: transparent;   /* Slightly dark overlay */
   backdrop-filter: blur(3px);
 }
 
@@ -47,7 +47,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.4);
+  background-color: transparent;
   backdrop-filter: blur(3px);
   position: relative;
   z-index: 1;
