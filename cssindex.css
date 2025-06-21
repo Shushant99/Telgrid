@@ -1,0 +1,156 @@
+/*  ───────────────────────────────
+    Telgrid.world – Global Reset
+    ─────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/*  ───────────────────────────────
+    Full‑screen video background
+    ─────────────────────────────── */
+/*  ❗ Add this <video> *anywhere* inside <body> in your HTML:
+      <video class="bg-video" autoplay muted loop playsinline>
+        <source src="matrix‑green.mp4" type="video/mp4">
+      </video>
+*/
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*  ───────────────────────────────
+    Layout containers
+    ─────────────────────────────── */
+header, footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);   /* Slightly dark overlay */
+  backdrop-filter: blur(3px);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e2e2e2;
+  font-size: 1rem;
+  transition: color 0.25s;
+}
+
+nav a:hover {
+  color: #00ff6a;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/*  ───────────────────────────────
+    Neon‑glow buttons
+    ─────────────────────────────── */
+.button-login,
+.button-signup {
+  position: relative;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #00ff6a;
+  border-radius: 8px;
+  background: transparent;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button-login:hover,
+.button-signup:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 8px 2px #00ff6a,
+    0 0 18px 6px rgba(0, 255, 106, 0.6),
+    inset 0 0 4px 1px #00ff6a;
+}
+
+/*  ───────────────────────────────
+    Hero section
+    ─────────────────────────────── */
+.hero {
+  min-height: calc(100vh - 160px);   /* Adjust if header/footer height changes */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 12px rgba(0, 255, 106, 0.8);
+}
+
+.hero #typing-text {
+  font-size: 1.25rem;
+  max-width: 30ch;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.hero-image img {
+  width: 220px;
+  max-width: 60vw;
+  filter: drop-shadow(0 0 8px #00ff6a);
+}
+
+/*  ───────────────────────────────
+    Footer
+    ─────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+footer p:first-child {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+
