@@ -44,43 +44,7 @@
                     <p>&copy; 2023 Telgrid.world | All Rights Reserved</p>
                 </div>
             </footer>
-    <script>
-        // JavaScript for typing animation
-        const textElement = document.getElementById("typing-text");
-        const textContent = "At Telgrid, we specialize in connecting skilled professionals with companies seeking talent for their projects. By leveraging our extensive network and deep industry knowledge, we ensure that you find the right match for your needs. Let Telgrid help you streamline your hiring process and enhance your team's capabilities today.";
-        let index = 0;
-
-        function typeText() {
-            if (index < textContent.length) {
-                textElement.textContent += textContent.charAt(index);
-                index++;
-                setTimeout(typeText, 25); // Adjust speed of typing here
-            }
-        }
-
-        // Start typing animation when the page loads
-        window.onload = typeText;
-
-
-        // Function to observe when the image enters the viewport
-        const image = document.querySelector('.hero-image2 img');
-
-        // Create an intersection observer to track when the image enters the screen
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Add the 'zoomed' class when the image enters the viewport
-                    entry.target.classList.add('zoomed');
-                } else {
-                    // Remove the 'zoomed' class when the image exits the viewport
-                    entry.target.classList.remove('zoomed');
-                }
-            });
-        }, { threshold: 0.5 }); // Trigger when 50% of the image is visible
-
-        // Start observing the image
-        observer.observe(image);
-    </script>
+    
 </body>
 
 </html>
